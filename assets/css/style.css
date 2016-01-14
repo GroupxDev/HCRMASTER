@@ -6672,13 +6672,13 @@ display: inline;
 .copyrights {
 	float: left;
 	width: 100%;
-	background: #1c2329;
+	
 	padding: 35px 0px 32px 0px;
 	color: #8e9194;
-	font-size: 13px;
+	font-size: 15px;
 }
 .copyrights a {
-	color: #8e9194;
+	color: #fff;
 	padding: 0px 5px;
 	transition: all 0.3s ease;
 }
