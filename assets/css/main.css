@@ -58,9 +58,19 @@
   font-weight: normal;
   font-style: normal;
 }
+
 .opensans {
   font-family: 'Opensans', sans-serif;
 }
+  
+@font-face {
+	font-family: 'FertigoPro-Regular';
+	src: url('../fonts/30162C_0_0.eot');
+	src: url('../fonts/30162C_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/30162C_0_0.woff2') format('woff2'),url('../fonts/30162C_0_0.woff') format('woff'),url('../fonts/30162C_0_0.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;	
+	}
+ 
 @font-face {
   font-family: 'JosefinSans';
   src: url('fonts/josefinsans-webfont.eot');
@@ -138,12 +148,14 @@ a:focus {
   text-decoration: none;
   outline: none;
 }
+/*
 p {
   color: rgba(255, 255, 255, 0.5);
   font-family: 'Opensans', sans-serif;
   font-size: 14px;
   line-height: 26px;
 }
+*/
 .icon-1half {
   font-size: 1.5em;
 }
@@ -273,7 +285,7 @@ Revolution slider
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #222222;
+  background-color: #fff;
   /* change if the mask should have another color then white */
 
   z-index: 999999;
@@ -282,7 +294,7 @@ Revolution slider
 }
 #preloader #status {
   min-height: 50px;
-  background: url(hrcLoader.gif) center center no-repeat;
+  background: url(ajax-loader.gif) center center no-repeat;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -315,20 +327,86 @@ Revolution slider
 #totop:hover {
   color: #f3f3f3;
 }
+._1drp _5lv6{
+	color:#000;
+}
 /* ==========================================================================
    About Me 
    ========================================================================== */
-#about-me {
-  
-   position: relative;
+.scheduler {
+
+  position: relative;
+ width:85%;
+  z-index: 99;
+	margin-bottom: -50px;
+}
+
+.scheduler a {
+
+  color: black;
+
+}
+.scheduler .main-nav .icon-shortcut {
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  bottom: -32px;
+  background-color: #3964c3;
+  height: 65px;
+  width: 65px;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+}
+.scheduler .main-nav .icon-shortcut:hover {
+  background-color: #043d7c;
+}
+.scheduler .main-nav .icon-shortcut:hover i {
+  -moz-transform: rotateZ(360deg) scale(0.8);
+  -ms-transform: rotateZ(360deg) scale(0.8);
+  -webkit-transform: rotateZ(360deg) scale(0.8);
+  transform: rotateZ(360deg) scale(0.8);
+}
+.scheduler .main-nav .icon-shortcut i {
+  -moz-transition: 0.5s cubic-bezier(0.93, 0.01, 0.37, 1);
+  -webkit-transition: 0.5s cubic-bezier(0.93, 0.01, 0.37, 1);
+  transition: 0.5s cubic-bezier(0.93, 0.01, 0.37, 1);
+  display: inline-block;
+  font-size: 24px;
+}
+
    
+
+.scheduler .main-nav {
+
+  display: table;
+
+  width: 100%;
+
+  padding-top: 10px;
+
+  padding-bottom: 20px;
+
+  position: relative;
+
+}
+
+#about-me {
+	
+	 position: relative;
+	 
 
   background-position: center center;
   background-size: cover;
 
 } 
 #about-me::after{
-  content : "";
+	content : "";
     display: block;
     position: absolute;
     top: 0;
@@ -336,7 +414,7 @@ Revolution slider
     background-image: url("../img/green-woman-1.jpg");
     width: 100%;
     height: 100%;
-  background-position: center center;
+	background-position: center center;
     background-size: cover;
     opacity : 0.6;
     z-index: -1;
@@ -344,14 +422,14 @@ Revolution slider
 
 
 #successful-stories {
-  
-  position: relative;
-  background-position: center center;
-  background-size: cover;
+	
+	position: relative;
+	background-position: center center;
+	background-size: cover;
 
 } 
 #successful-stories::after{
-  content : "";
+	content : "";
     display: block;
     position: absolute;
     top: 0;
@@ -359,8 +437,8 @@ Revolution slider
     background-image: url("../img/pool.jpg");
     width: 100%;
     height: 100%;
-  background-position: center center;
-  background-size: cover;
+	background-position: center center;
+	background-size: cover;
     opacity : 1;
     z-index: -1;
 }  
@@ -395,15 +473,17 @@ Revolution slider
   padding-top: 10px;
 }
 .full-screen-block .fade-ticker {
-  font-family: 'JosefinSans', sans-serif;
-  position: absolute;
-  
+	font-family: 'JosefinSans', sans-serif;
+    bottom: 12px;
+    left: 0;
+    position: absolute;
+    width: 800px;
 }
 .full-screen-block .fade-ticker .big-text {
   padding: 30px;
 }
 .full-screen-block .fade-ticker .big-text h1 {
-  font-size: 35px;
+  font-size: 3.75em;
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
   text-transform: uppercase;
@@ -417,8 +497,8 @@ Revolution slider
    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 .full-screen-block .btn-default {
-  color: #b46e3c;
-  border-color: #b46e3c;
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 .full-screen-block .btn-default:hover {
   border-color: #ffffff;
@@ -858,7 +938,7 @@ section.bg-non-fixed {
   height: 100%;
   background-image: url("../img/main4.jpg");
   background-size: cover;
-  background-position-x:18%;
+  background-position: top left;
 }
 .section-block-title {
   position: relative;
@@ -1623,6 +1703,15 @@ section:hover .img-rotate img {
 /* ==========================================================================
    Portfolio style
    ========================================================================== */
+   
+#paypal-button{
+	padding:20px;
+	position: fixed;
+    bottom: 0;
+    -webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	right:0;
+}
 .portfolio-filter-block {
   position: relative;
   padding-top: 100px;
@@ -2176,9 +2265,9 @@ form textarea {
   color: #b46e3c;
   line-height: inherit;
   padding: 6px 20px;
-  width: 100%;
+ /* width: 100%;*/
   font-size: 14px;
-  background: #191919;
+ /* background: #191919;                  								Jim Did this*/
   margin-bottom: 25px;
   text-align: center;
 }
