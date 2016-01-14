@@ -1,164 +1,83 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // jQuery
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 $(document).ready(function($) {
-
     "use strict";
 
-
-
     $(".nav-toggle").on('click',function (e) {
-
         $(".main-nav nav").toggleClass("show-nav");
-
     });
-
-
 
 //  Revolution Slider
 
-
-
     if( $(".rev-slider").length ){
-
         $(".rev-slider").revolution({
-
             sliderType:"standard",
-
             sliderLayout:"hero",
-
             delay:9000,
-
             gridheight:650,
-
             navigation: {
-
                 arrows:{enable:true}
-
             }
-
         });
-
     }
-
-
 
 //  Calendar
 
-
-
     if( $(".calendar").length ){
-
         $(".calendar").zabuto_calendar({
-
             ajax: {
-
                 url: "assets/external/calendar.php",
-
                 modal: true
-
             },
-
             action: function () {
-
                 return checkDate(this.id);
-
             },
-
             language: "en",
-
             show_previous: false,
-
             today: true,
-
             nav_icon: {
-
                 prev: '<i class="arrow_left"></i>',
-
                 next: '<i class="arrow_right"></i>'
-
             }
-
         });
-
     }
-
-
 
 //  Smooth Scroll
 
-
-
     $('.main-nav a[href^="#"], a[href^="#"].scroll').on('click',function (e) {
-
         e.preventDefault();
-
         var target = this.hash,
-
             $target = $(target);
-
         $('html, body').stop().animate({
-
             'scrollTop': $target.offset().top
-
         }, 2000, 'swing', function () {
-
             window.location.hash = target;
-
         });
-
     });
-
-
 
 //  Radio buttons in modal
 
-
-
     $(".times .btn").on("click", function() {
-
         $(this).parent().find("input[type=radio]").attr("checked", false);
-
         $(this).find("input[type=radio]").attr("checked", true);
-
     });
-
-
 
 //  Owl Carousel
 
-
-
     if( $(".owl-carousel").length ){
-
         $(".owl-carousel").owlCarousel({
-
             margin:30,
-
             items: 4,
-
             navText: []
-
         });
-
     }
-
-
 
 //  Fit Videos
 
-
-
     if( $(".video").length ){
-
         $(".video").fitVids();
-
     }
-
-
 
 //  Form Validation
 
@@ -190,7 +109,8 @@ $(document).ready(function($) {
 
     });
 	// *******************************    animate blocks ******************************
-      $(function () {
+ /*
+ $(function () {
     var $window = $(window), win_height_padded = $window.height() * 1.1; //isTouch = Modernizr.touch;
   //  if (isTouch) {
   //      $('.revealOnScroll').addClass('animated');
@@ -219,6 +139,7 @@ $(document).ready(function($) {
     }
     revealOnScroll();
 });
+*/
  // *************************************************************************************8	
     // Mailchimp Subscribtion Form
 /*
@@ -303,27 +224,27 @@ $(document).ready(function($) {
 
 	/* THE CALENDAR FORM*/
 
-$("#form-calendar button").on("click", function(){
+		$("#form-calendar button").on("click", function(){
 
-    //    $("#form-calendar").validate({
+			//    $("#form-calendar").validate({
 
-      //      submitHandler: function() {
+			  //      submitHandler: function() {
 
-                $.post("assets/external/calendar_appointment.php", $("#form-calendar").serialize(),  function(response) {
+						$.post("assets/external/calendar_appointment.php", $("#form-calendar").serialize(),  function(response) {
 
-                    $('#form-calendar .form-status').html(response);
+							$('#form-calendar .form-status').html(response);
 
-                   // $('#form-subscribe button').attr('disabled','true');
+						   // $('#form-subscribe button').attr('disabled','true');
 
-                });
+						});
 
-                return false;
+						return false;
 
-         //   }
+				 //   }
 
-     //   });
+			 //   });
 
-    });
+			});
 
 	
 
@@ -442,4 +363,3 @@ function equalHeight(container){
     });
 
 }
-
