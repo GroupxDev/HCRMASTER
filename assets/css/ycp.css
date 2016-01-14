@@ -170,31 +170,18 @@ iframe.ibacordotcom-vid-iframe {
     font-family: Helvetica !important;
     font-size: 13px !important;
     font-weight: bold !important;
-    height: 34px !important;
-    line-height: 34px !important;
-    margin: 52px 10px 10px !important;
+    height: 60px !important;
+    line-height: 50px !important;
+    margin: 10px 10px 0 !important;
     text-align: center !important;
     text-decoration: none !important;
     text-shadow: 0 1px #fff !important;
-     
-}
-#instafeed a i {
-background: #2862d8;
-	    color: #fff;
-    width: 24px;
-    height: 24px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 24px;
-    border-radius: 100%;
-    transition: all 0.3s ease;
-    margin-left:10px;
 }
 #instafeed {
     background: #fff none repeat scroll 0 0 !important;
     border-radius: 3px !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.33) !important;
-   display: inline-block;
+   
 }
 @media only screen and (min-width: 960px) and (max-width: 1045px) {
 	h1{font-size: 26px;line-height: 24px;}
