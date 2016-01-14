@@ -42,15 +42,10 @@ jQuery(document).ready(function ($) {
      Top Header
      =============================================== */
     //Keep track of last scroll
-    
     var lastScroll = 0;
     var header = $("#header");
     var headerfixed = $("#header-body-fixed");
-
-        
-    
     $(window).on("scroll", function () {
-            if (header.hasClass("main")){
         //Sets the current scroll position
         var st = $(this).scrollTop();
         //Determines up-or-down scrolling
@@ -71,12 +66,11 @@ jQuery(document).ready(function ($) {
                 $("#totop").css("display", "none");
             }
         }
-    }
         //Updates scroll position
         lastScroll = st;
 
     });
-    
+
 
     /* ==============================================
      Page Scrolling
@@ -530,67 +524,8 @@ jQuery(document).ready(function ($) {
     /* ==============================================
      Youtube player
      =============================================== */
-    $("#bgndVideo").mb_YTPlayer();
+    $(".bg-youtube").mb_YTPlayer();
 
-    
-    
-/*
-    var myPlayer = jQuery("#bgndVideo").YTPlayer({
-        onReady: function (player) {
-            YTPConsole.append(player.id + " player is ready");
-            YTPConsole.append("<br>");
-        }
-    });
-*/
-    /* DEBUG ******************************************************************************************/
-
-    var YTPConsole = jQuery("#eventListener");
-    // EVENT: YTPStart YTPEnd YTPLoop YTPPause YTPBuffering
-    myPlayer.on("YTPStart YTPEnd YTPLoop YTPPause YTPBuffering", function (e) {
-        YTPConsole.append(e.type + " - " + jQuery("#bgndVideo").getPlayer().getPlayerState() + " - time: " + e.time);
-        YTPConsole.append("<br>");
-    });
-    // EVENT: YTPChanged
-    myPlayer.on("YTPChanged", function (e) {
-        YTPConsole.html("");
-    });
-
-    // EVENT: YTPData
-    myPlayer.on("YTPData", function (e) {
-        YTPConsole.append("******************************");
-        YTPConsole.append("<br>");
-        YTPConsole.append(e.type);
-        YTPConsole.append("<br>");
-        YTPConsole.append(e.prop.title);
-        YTPConsole.append("<br>");
-        YTPConsole.append(e.prop.description.replace(/\n/g, "<br/>"));
-        YTPConsole.append("<br>");
-        YTPConsole.append("******************************");
-        YTPConsole.append("<br>");
-    });
-
-    // EVENT: YTPTime
-    myPlayer.on("YTPTime", function (e) {
-        var currentTime = e.time;
-        var player = e.target.wrapper;
-        var traceLog = currentTime / 4 == Math.floor(currentTime / 4);
-
-        if (traceLog && YTPConsole.is(":visible")) {
-            YTPConsole.append(e.type + " actual time is: " + currentTime);
-            YTPConsole.append("<br>");
-        }
-    });
-
-    /* DEBUG END ******************************************************************************************/
-
-
-var v = false;
-function changeVideo() {
-    var vID = v ? "7SnmCUwOsts" : "BsekcY04xvQ";
-    jQuery('#bgndVideo').changeMovie({videoURL: vID});
-    $("#vidData").toggle(1000);
-    v = !v;
-}
 
     /* ==============================================
      background ticker
@@ -777,6 +712,4 @@ function changeVideo() {
  WOW Appear
  =============================================== */
 new WOW().init();
-
-
 
