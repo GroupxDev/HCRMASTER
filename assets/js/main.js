@@ -763,3 +763,37 @@ var fuck="";
  =============================================== */
 new WOW().init();
 
+
+	/* Our Work */
+	$('.pricing').each(function ()
+	{
+		var $this = $(this);
+		var myVal = $(this).data("value");
+
+		$this.appear(function()
+		{
+			setTimeout(function(){
+ 
+
+			$('').addClass('animated fadeInDown');
+		//	$('.our-work .portfolio-categories').addClass('animated fadeInUp');
+			$('.package').addClass('animated rollIn');
+			},1);
+		});
+	});
+
+
+			var $this = $(this);
+			var myVal = $(this).data("value");
+
+		$this.appear(function()
+		{
+			$('.item1').addClass('article-scroll');
+			$('.item2').addClass('article-scroll');
+			$('.item3').addClass('article-scroll');
+			$('.item4').addClass('article-scroll');
+			$('.item5').addClass('article-scroll');
+		});
+	
+
+
