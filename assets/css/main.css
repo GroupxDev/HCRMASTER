@@ -118,6 +118,8 @@ body {
   max-width: 1170px;
   margin: auto;
 }
+
+
 h1,
 h2,
 h3,
@@ -917,6 +919,17 @@ video#cover-video {
 #header .navbar-default .navbar-toggle:focus {
   background-color: #b46e3c;
   border-color: #b46e3c;
+}
+
+#healings{
+  position:fixed;
+  top:200px;
+  right:0px;
+  opacity:.6;
+}
+#healings :hover{
+  
+  opacity:.8;
 }
 section {
   overflow: hidden;
