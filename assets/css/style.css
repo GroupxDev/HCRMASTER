@@ -8418,7 +8418,11 @@ img {
 
 
 
+
 }
+
+  
+
 
 
 
@@ -12544,7 +12548,9 @@ textarea {
 
   overflow: hidden;
 
+
   text-transform: none;
+
 
   -webkit-transition: 0.3s;
 
@@ -12570,10 +12576,9 @@ textarea {
 
   padding: 0px 15px;
 
+
   font-weight: 500;
-
   margin: 0px;
-
   text-transform: none;
 
   -webkit-transition: 0.2s;
@@ -13055,7 +13060,54 @@ textarea {
   text-shadow:2px 2px 1px rgba(0,0,0,0.5);
 
 }
-
+#successful-stories h2{
+  color: #FFF;
+  font-size: 52px;
+  line-height: 58px;
+  padding: 0px 15px;
+  font-weight: 500;
+  margin: 0px;
+  text-transform: none;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+  display: table;
+  text-shadow:2px 2px 1px rgba(0,0,0,0.5);
+}
+#about-me h2{
+  color: #FFF;
+  font-size: 52px;
+  line-height: 58px;
+  padding: 0px 15px;
+  font-weight: 500;
+  margin: 0px;
+  text-transform: none;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+  display: table;
+  text-shadow:2px 2px 1px rgba(0,0,0,0.5);
+}
+#packages h2{
+  color: #FFF;
+  font-size: 52px;
+  line-height: 58px;
+  padding: 0px 15px;
+  font-weight: 500;
+  margin: 0px;
+  text-transform: none;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+  display: table;
+  text-shadow:2px 2px 1px rgba(0,0,0,0.5);
+}
 
 
 /* Footer styling*/
