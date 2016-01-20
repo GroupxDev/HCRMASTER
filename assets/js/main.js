@@ -524,8 +524,62 @@ jQuery(document).ready(function ($) {
     /* ==============================================
      Youtube player
      =============================================== */
-    $(".bg-youtube").mb_YTPlayer();
 
+
+
+    $("#bgndVideo").mb_YTPlayer();
+
+    
+    
+/*
+    var myPlayer = jQuery("#bgndVideo").YTPlayer({
+        onReady: function (player) {
+            YTPConsole.append(player.id + " player is ready");
+            YTPConsole.append("<br>");
+        }
+    });
+*/
+    /* DEBUG ******************************************************************************************/
+/*
+    var YTPConsole = jQuery("#eventListener");
+    // EVENT: YTPStart YTPEnd YTPLoop YTPPause YTPBuffering
+    myPlayer.on("YTPStart YTPEnd YTPLoop YTPPause YTPBuffering", function (e) {
+        YTPConsole.append(e.type + " - " + jQuery("#bgndVideo").getPlayer().getPlayerState() + " - time: " + e.time);
+        YTPConsole.append("<br>");
+    });
+    // EVENT: YTPChanged
+    myPlayer.on("YTPChanged", function (e) {
+        YTPConsole.html("");
+    });
+
+    // EVENT: YTPData
+    myPlayer.on("YTPData", function (e) {
+        YTPConsole.append("******************************");
+        YTPConsole.append("<br>");
+        YTPConsole.append(e.type);
+        YTPConsole.append("<br>");
+        YTPConsole.append(e.prop.title);
+        YTPConsole.append("<br>");
+        YTPConsole.append(e.prop.description.replace(/\n/g, "<br/>"));
+        YTPConsole.append("<br>");
+        YTPConsole.append("******************************");
+        YTPConsole.append("<br>");
+    });
+
+    // EVENT: YTPTime
+    myPlayer.on("YTPTime", function (e) {
+        var currentTime = e.time;
+        var player = e.target.wrapper;
+        var traceLog = currentTime / 4 == Math.floor(currentTime / 4);
+
+        if (traceLog && YTPConsole.is(":visible")) {
+            YTPConsole.append(e.type + " actual time is: " + currentTime);
+            YTPConsole.append("<br>");
+        }
+    });
+
+*/
+>>>>>>> 38c53283974e8761c563e9d3d80c57b96897be9d
 
     /* ==============================================
      background ticker
@@ -707,9 +761,46 @@ jQuery(document).ready(function ($) {
         onComplete: null // callback method for when the element finishes updating
     };
 })(jQuery);
-
+var fuck="";
 /* ==============================================
  WOW Appear
  =============================================== */
 new WOW().init();
 
+<<<<<<< HEAD
+=======
+
+	/* Our Work */
+	$('.pricing').each(function ()
+	{
+		var $this = $(this);
+		var myVal = $(this).data("value");
+
+		$this.appear(function()
+		{
+			setTimeout(function(){
+ 
+
+			$('').addClass('animated fadeInDown');
+		//	$('.our-work .portfolio-categories').addClass('animated fadeInUp');
+			$('.package').addClass('animated rollIn');
+			},1);
+		});
+	});
+
+
+			var $this = $(this);
+			var myVal = $(this).data("value");
+
+		$this.appear(function()
+		{
+			$('.item1').addClass('article-scroll');
+			$('.item2').addClass('article-scroll');
+			$('.item3').addClass('article-scroll');
+			$('.item4').addClass('article-scroll');
+			$('.item5').addClass('article-scroll');
+		});
+	
+
+
+>>>>>>> 38c53283974e8761c563e9d3d80c57b96897be9d
