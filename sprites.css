@@ -1,0 +1,52 @@
+.facebookNormal, .pintrestNormal, .instagramNormal, .youtubeNormal, .instagramHover, .pintrestHover, .facebookHover, .youtubeHover{
+	background: url(sprites.png) no-repeat;
+}
+
+.facebookNormal{
+	background-position: 0 -1px ;
+	width: 106px;
+	height: 108px;
+}
+
+.pintrestNormal{
+	background-position: -114px 0;
+	width: 106px;
+	height: 108px;
+}
+
+.instagramNormal{
+	background-position: -226px -1px ;
+	width: 106px;
+	height: 108px;
+}
+
+.youtubeNormal{
+	background-position: -334px 0;
+	width: 106px;
+	height: 108px;
+}
+
+.instagramHover:hover{
+	background-position: -226px -122px ;
+	width: 84px;
+	height: 104px;
+}
+
+.pintrestHover:hover{
+	background-position: -109px -117px ;
+	width: 84px;
+	height: 104px;
+}
+
+.facebookHover:hover{
+	background-position: 0 -85px ;
+	width: 84px;
+	height: 104px;
+}
+
+.youtubeHover:hover{
+	background-position: -338px -121px ;
+	width: 84px;
+	height: 104px;
+}
+
